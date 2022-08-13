@@ -24,7 +24,7 @@ public class Uri2602Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<CustomerMinProjection> list = repository.searchByStateSql("RS");
+		List<CustomerMinProjection> list = repository.searchByStateSql("rs");
 		List<CustomerMinDTO> result = list.stream()
 				.map(x -> new CustomerMinDTO(x)).collect(Collectors.toList());
 		
